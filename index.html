@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Process</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.18.12/package/dist/xlsx.mini.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wraper" class="wrapper">
+
+        <div class="formSection">
+
+            <div class="statusRow">
+                <div id="nameOfSlot" class="nameOfSlot"></div>
+                <div id="statusOfSlot" class="statusOfSlot"></div>
+            </div>
+
+            <form id="mainForm" class="formContainer">
+                <div class="formRow">
+                    <label for="operatorName" class="formLabel">Operator name</label>
+                    <input type="text" autofocus required id="operatorName" class="formInput" >
+                </div>
+                <div class="formRow">
+                    <label for="boardSerialNumber" class="formLabel">Board SN</label>
+                    <input type="text" required id="boardSerialNumber" class="formInput">
+                </div>
+                <div class="formRow">
+                    <label for="date" class="formLabel">Date</label>
+                    <input type="text" id="date" class="formInput" disabled value="">
+                </div>
+                <div class="formRow">
+                    <label for="time" class="formLabel">Time Started</label>
+                    <input type="text" id="time" class="formInput" disabled value="">
+                </div>
+
+                <div class="formRow">
+                    <input type="submit" id="saveButton" disabled class="saveButton" value="Start Baking!" />
+                    <button id="stopButton" disabled class="saveButton">Stop Baking!</button>
+                </div>
+
+            </form>
+
+            <div class="exportSection">
+            <button id="exportButton">Export!</button>
+        </div>
+        </div>
+        <div class="ovenSection">
+            <div class="ovenSctructure">
+                <div class="controls">
+                    memmert universal oven
+                </div>
+                <div class="hSlot" id="slot1">
+                    <div class="nameSlot">SLOT 1</div>
+                    <div class="timer"></div>
+                </div>
+                <div class="hSlot" id="slot2">
+                    <div class="nameSlot">SLOT 2</div>
+                    <div class="timer"></div>
+                </div>
+                <div class="hSlot" id="slot3">
+                    <div class="nameSlot">SLOT 3</div>
+                    <div class="timer"></div>
+                </div>
+
+                <div class="verticalSection">
+                    <div class="vSlot" id="slot5">
+                        <div class="nameSlot">SLOT 5</div>
+                        <div class="timer"></div>
+                    </div>
+                    <div class="vSlot" id="slot6">
+                        <div class="nameSlot">SLOT 6</div>
+                        <div class="timer"></div>
+                    </div>
+                    <div class="vSlot" id="slot7">
+                        <div class="nameSlot">SLOT 7</div>
+                        <div class="timer"></div>
+                    </div>
+                    <div class="vSlot" id="slot8">
+                        <div class="nameSlot">SLOT 8</div>
+                        <div class="timer"></div>
+                    </div>
+                    <div class="vSlot" id="slot9">
+                        <div class="nameSlot">SLOT 9</div>
+                        <div class="timer"></div>
+                    </div>
+                    <div class="vSlot" id="slot10">
+                        <div class="nameSlot">SLOT 10</div>
+                        <div class="timer"></div>
+
+                    </div>
+                    <div class="vSlot" id="slot11">
+                        <div class="nameSlot">SLOT 11</div>
+                        <div class="timer"></div>
+
+                    </div>
+                    <div class="vSlot" id="slot12">
+                        <div class="nameSlot">SLOT 12</div>
+                        <div class="timer"></div>
+                    </div>
+                    <div class="vSlot" id="slot13">
+                        <div class="nameSlot">SLOT 13</div>
+                        <div class="timer"></div>
+
+                    </div>
+                    <div class="vSlot" id="slot14">
+                        <div class="nameSlot">SLOT 14</div>
+                        <div class="timer"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

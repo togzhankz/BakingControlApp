@@ -1,0 +1,191 @@
+/* #region general Settings */
+
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.wrapper>div {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* #endregion */
+
+
+
+
+
+/* #region form Section */
+
+.formSection {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.statusRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusOfSlot {
+    margin-bottom: 50px;
+    background-color: greenyellow;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    margin-right: 10px;
+}
+
+.formInput {
+    color: black;
+    width: 50%;
+}
+
+.saveButton {
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    font: inherit;
+    outline: inherit;
+}
+
+.saveButton:not(:disabled) {
+    cursor: pointer;
+}
+
+.IDLE{
+    background-color: black;
+}
+.IDLE>.timer{
+    display: none;
+}
+
+.BAKING{
+    background-color: orange;
+}
+
+.READY{
+    background-color: green;
+}
+
+.OVERBAKED{
+    background-color: red;
+}
+
+.selected{
+    border: 5px solid cornflowerblue !important;
+}
+
+.exportSection{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#exportButton{
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* #endregion */
+
+
+
+
+
+
+/*#region oven Section */
+.ovenSection {
+    flex-grow: 2;
+}
+
+
+.ovenSctructure {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 30px;
+    font-family: monospace;
+    margin: 5px;
+
+    border: 1px dashed gray;
+
+    height: 50px;
+    border-radius: 5px;
+}
+
+.hSlot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 1px solid white;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.timer {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.verticalSection {
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 20;
+}
+
+.vSlot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 1px solid white;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+/*#endregion */
+
