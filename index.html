@@ -24,12 +24,22 @@
 
             <form id="mainForm" class="formContainer">
                 <div class="formRow">
-                    <label for="operatorName" class="formLabel">Operator name</label>
+                    <label for="operatorName" class="formLabel">Operator ID</label>
                     <input type="text" autofocus required id="operatorName" class="formInput" >
                 </div>
                 <div class="formRow">
                     <label for="boardSerialNumber" class="formLabel">Board SN</label>
                     <input type="text" required id="boardSerialNumber" class="formInput">
+                </div>
+                <div class="formRow">
+                    <label for="boardSerialNumber" class="formLabel">Board Source</label>
+                    <select name="source" id="source">
+                      <option value="SMA">SMA</option>
+                      <option value="FA">FA</option>
+                      <option value="TRSH">TRSH</option>
+                      <option value="CLAIM">Claim</option>
+                      <option value="OTHER">Other</option>
+                    </select>
                 </div>
                 <div class="formRow">
                     <label for="date" class="formLabel">Date</label>
