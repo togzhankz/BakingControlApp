@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+      }
+
+      .hSlot {
+        border: 5px solid white;
+        display: flex;
+        padding: 5px;
+        position: relative;
+        margin-bottom: 10px;
+
+        width: 80vw;
+        height: 100px;
+      }
+
+      .subSlot {
+        position: relative;
+        cursor: pointer;
+        flex-grow: 0;
+        width: 0px;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        transition-timing-function: ease-in-out;
+        border-radius: 5px;
+        border: 5px solid white;
+      }
+      .subSlot > .timeRemaining {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+      }
+      .subSlot > .slotState {
+        position: absolute;
+        bottom: 2px;
+        left: 2px;
+      }
+
+      .subSlot ~ .subSlot {
+        margin-left: 5px;
+      }
+      .subSlot:first-child{
+        flex-grow: 1;
+        width: 100%;
+      }
+   
+      .subSlot.selected{
+        
+        width: 100%;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      const createSubslot = (
+        slotNumber,
+        subSlotLetter,
+        state = "IDLE",
+        time = ""
+      ) => {
+        const subSlot = document.createElement("div");
+        subSlot.classList.add("subSlot",state);
+
+        subSlot.addEventListener("click",(e)=>{
+               subSlot.classList.toggle("selected")
+        })
+
+        const timeRemaining = document.createElement("div");
+        timeRemaining.classList.add("timeRemaining");
+        timeRemaining.innerText = time;
+
+        const slotState = document.createElement("div");
+        slotState.classList.add("slotState");
+        slotState.innerText = state;
+
+        subSlot.innerText = `SLOT ${slotNumber}.${subSlotLetter}`;
+        subSlot.appendChild(timeRemaining);
+        subSlot.appendChild(slotState);
+    
+
+
+        return subSlot;
+      };
+
+      const container = document.getElementById("container");
+
+      for (let idSlot = 1; idSlot <=3; idSlot++) {
+   
+        // this logic repeated for each element
+        const slot = document.createElement("div");
+        slot.classList.add("hSlot");
+        slot.id = `slot${idSlot}`;
+
+        const subSlotLetters = ["A", "B", "C", "D", "E"];
+
+        subSlotLetters.forEach((letter) => {
+          const subSlot = createSubslot(idSlot, letter);
+
+          slot.appendChild(subSlot);
+        });
+
+        container.appendChild(slot);
+      }
+    </script>
+  </body>
+</html>

@@ -14,12 +14,34 @@ body {
     position: fixed;
     left: 4px;
     top: 3px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
 }
-#hideButton>.hide:not{
-    color: black;
 
+
+#hideButton>svg{
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transform: rotate(180deg);
 }
 
+#wraper.hideSidebar #hideButton>svg{
+    transform: rotate(0deg);
+}
+
+
+#hideButton>svg:hover{
+    background: black;
+}
+#hideButton>svg:hover path{
+    fill: white;
+}
 
 .wrapper {
     background-color: black;
@@ -44,6 +66,10 @@ body {
 
 
 /* #region form Section */
+#wraper.hideSidebar>.formSection {
+    display: none;
+}
+
 
 .formSection {
     flex-grow: 1;

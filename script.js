@@ -19,8 +19,7 @@ const slots = [
     "slot10",
     "slot11",
     "slot12",
-    "slot13",
-    "slot14"
+    "slot13"
 ];
 
 const SlotState = {
@@ -39,6 +38,8 @@ const dateField = document.getElementById("date");
 const timeField = document.getElementById("time");
 const slotsElements = slots.map(id => document.getElementById(id));
 
+const hideButton = document.getElementById("hideButton");
+const wraper = document.getElementById("wraper");
 
 const nameOfSlot = document.getElementById("nameOfSlot");
 const statusOfSlot = document.getElementById("statusOfSlot");
@@ -76,30 +77,6 @@ const addRecordToExportableData = (slot) => {
 
 }
 //#endregion
-
-
-//#region Persistant state in local storage
-
-const saveState = () => {
-    localStorage.setItem("state", JSON.stringify(state));
-}
-
-const loadState = () => {
-    const state = localStorage.getItem("state");
-    if (state) {
-        setState(JSON.parse(state));
-    }
-
-    const expData = localStorage.getItem("exportableData");
-    if (expData) {
-        exportableData = JSON.parse(expData);
-    }
-}
-
-loadState();
-
-//#endregion
-
 
 //#region Main state
 const state = {};
@@ -159,6 +136,31 @@ setState(initialState);
 
 
 //#endregion
+
+
+
+//#region Persistant state in local storage
+
+const saveState = () => {
+    localStorage.setItem("state", JSON.stringify(state));
+}
+
+const loadState = () => {
+    const state = localStorage.getItem("state");
+    if (state) {
+        setState(JSON.parse(state));
+    }
+
+    const expData = localStorage.getItem("exportableData");
+    if (expData) {
+        exportableData = JSON.parse(expData);
+    }
+}
+
+loadState();
+
+//#endregion
+
 
 
 //#region SlotSelected state
@@ -239,6 +241,10 @@ const getTimeLapsed = (milliseconds) => {
 
 //#region Events
 
+// Hide SideBar
+hideButton.addEventListener("click", () => {
+    wraper.classList.toggle("hideSidebar");
+});
 
 //#region Select Slot logic
 slotsElements.forEach((slotElement) => {
@@ -280,7 +286,7 @@ const unselectSlots = () => {
 
 }
 
-const wraper = document.getElementById("wraper");
+
 wraper.addEventListener("click", () => {
     unselectSlots();
 })

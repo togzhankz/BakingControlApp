@@ -7,20 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baking Process</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="logo.ico"/>
     <script src="script.js" defer></script>
     <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.18.12/package/dist/xlsx.mini.min.js"></script>
 </head>
 
 <body>
-    <div id="hideButton">
-        <button class="hide">Hide</button>
-        <button class="hide">Hide</button>
-        <button class="hide">Hide</button>
-        <button class="hide">Hide</button>
-        <button class="hide">Hide</button>
-        </div>
+
 
     <div id="wraper" class="wrapper">
+
+        <div id="hideButton" class="rotated">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">
+                <g>
+                    <path d="M245,0C109.7,0,0,109.7,0,245s109.7,245,245,245s245-109.7,245-245S380.3,0,245,0z M315,287.7l-90.5,90.5l-42.7-42.7 l90.5-90.5l-90.5-90.5l42.7-42.7l90.5,90.5l42.7,42.7L315,287.7z" />
+                </g>
+            </svg>
+
+        </div>
+
 
         <div class="formSection">
 
@@ -28,12 +34,12 @@
                 <div id="nameOfSlot" class="nameOfSlot"></div>
                 <div id="statusOfSlot" class="statusOfSlot"></div>
             </div>
-            
+
 
             <form id="mainForm" class="formContainer">
                 <div class="formRow">
                     <label for="operatorName" class="formLabel">Operator ID</label>
-                    <input type="text" autofocus required id="operatorName" class="formInput" >
+                    <input type="text" autofocus required id="operatorName" class="formInput">
                 </div>
                 <div class="formRow">
                     <label for="boardSerialNumber" class="formLabel">Board SN</label>
@@ -42,11 +48,11 @@
                 <div class="formRow">
                     <label for="boardSource" class="formLabel">Board Source</label>
                     <select name="source" id="source">
-                      <option value="SMA">SMA</option>
-                      <option value="FA">FA</option>
-                      <option value="TRSH">TRSH</option>
-                      <option value="CLAIM">Claim</option>
-                      <option value="OTHER">Other</option>
+                        <option value="SMA">SMA</option>
+                        <option value="FA">FA</option>
+                        <option value="TRSH">TRSH</option>
+                        <option value="CLAIM">Claim</option>
+                        <option value="OTHER">Other</option>
                     </select>
                 </div>
                 <div class="formRow">
@@ -66,8 +72,8 @@
             </form>
 
             <div class="exportSection">
-            <button id="exportButton">Export!</button>
-        </div>
+                <button id="exportButton">Export!</button>
+            </div>
         </div>
         <div class="ovenSection">
             <div class="ovenSctructure">
@@ -75,23 +81,29 @@
                     memmert universal oven
                 </div>
                 <div class="hSlot" id="slot1">
+                    <div class="add">+</div>
                     <div class="nameSlot">SLOT 1</div>
                     <div class="timer"></div>
+                   
                 </div>
                 <div class="hSlot" id="slot2">
+                    <div class="add">+</div>
                     <div class="nameSlot">SLOT 2</div>
                     <div class="timer"></div>
+                   
                 </div>
                 <div class="hSlot" id="slot3">
+                    <div class="add">+</div>
                     <div class="nameSlot">SLOT 3</div>
                     <div class="timer"></div>
+                   
                 </div>
-                <div class="hSlot" id="slot4">
-                    <div class="nameSlot">SLOT 4</div>
-                    <div class="timer"></div>
-                </div>
-
+                
                 <div class="verticalSection">
+                    <div class="vSlot" id="slot4">
+                        <div class="nameSlot">SLOT 4</div>
+                        <div class="timer"></div>
+                    </div>
                     <div class="vSlot" id="slot5">
                         <div class="nameSlot">SLOT 5</div>
                         <div class="timer"></div>
@@ -129,13 +141,8 @@
                     <div class="vSlot" id="slot13">
                         <div class="nameSlot">SLOT 13</div>
                         <div class="timer"></div>
-
                     </div>
-                    <div class="vSlot" id="slot14">
-                        <div class="nameSlot">SLOT 14</div>
-                        <div class="timer"></div>
-
-                    </div>
+    
 
                 </div>
 
