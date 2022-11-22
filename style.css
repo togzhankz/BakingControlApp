@@ -232,3 +232,56 @@ body {
 
 /*#endregion */
 
+
+
+
+
+
+.hSlot {
+    border: 5px solid white;
+    display: flex;
+    padding: 5px;
+    position: relative;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+
+  .subSlot {
+    position: relative;
+    cursor: pointer;
+    flex-grow: 0;
+    width: 0px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+    border-radius: 5px;
+    border: 5px solid white;
+  }
+  .subSlot > .timeRemaining {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  .subSlot > .slotState {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+  }
+
+  .subSlot ~ .subSlot {
+    margin-left: 5px;
+  }
+  .subSlot:first-child{
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .subSlot.selected{
+    
+    width: 100%;
+    flex-grow: 1;
+  }
