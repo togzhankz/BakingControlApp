@@ -1,287 +1,259 @@
 /* #region general Settings */
 
 * {
-    box-sizing: border-box;
-    color: white;
+  box-sizing: border-box;
+  color: white;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
-
 
 #hideButton {
-    position: fixed;
-    left: 4px;
-    top: 3px;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    border: none;
+  position: fixed;
+  left: 4px;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
 }
 
-
-#hideButton>svg{
-    width: 30px;
-    height: 30px;
-    border: 3px solid white;
-    border-radius: 50%;
-    background: white;
-    cursor: pointer;
-    transform: rotate(180deg);
+#hideButton > svg {
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  transform: rotate(180deg);
 }
 
-#wraper.hideSidebar #hideButton>svg{
-    transform: rotate(0deg);
+#wraper.hideSidebar #hideButton > svg {
+  transform: rotate(0deg);
 }
 
-
-#hideButton>svg:hover{
-    background: black;
+#hideButton > svg:hover {
+  background: black;
 }
-#hideButton>svg:hover path{
-    fill: white;
+#hideButton > svg:hover path {
+  fill: white;
 }
 
 .wrapper {
-    background-color: black;
-    padding: 20px;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
-.wrapper>div {
-    border: 2px solid white;
-    margin: 10px;
-    padding: 20px;
+.wrapper > div {
+  border: 2px solid white;
+  margin: 10px;
+  padding: 20px;
 }
 
 /* #endregion */
 
-
-
-
-
 /* #region form Section */
-#wraper.hideSidebar>.formSection {
-    display: none;
+#wraper.hideSidebar > .formSection {
+  display: none;
 }
 
-
 .formSection {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .statusRow {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .statusOfSlot {
-    margin-bottom: 50px;
-    background-color: greenyellow;
-    color: black;
-    padding: 5px;
-    border-radius: 5px;
+  margin-bottom: 50px;
+  background-color: greenyellow;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .formRow {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 #source {
-    color: black;
-    width: 50%;
-  }
+  color: black;
+  width: 50%;
+}
 
 .formLabel {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .formInput {
-    color: black;
-    width: 50%;
+  color: black;
+  width: 50%;
 }
 
 .saveButton {
-    color: black;
-    padding: 20px;
-    border-radius: 20px;
-    border: none;
-    font: inherit;
-    outline: inherit;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  font: inherit;
+  outline: inherit;
 }
 
 .saveButton:not(:disabled) {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.IDLE{
-    background-color: black;
+.IDLE {
+  background-color: black;
 }
-.IDLE>.timer{
-    display: none;
-}
-
-.BAKING{
-    background-color: orange;
+.IDLE > .timeRemaining,
+.IDLE > .slotState {
+  display: none;
 }
 
-.READY{
-    background-color: green;
+.BAKING {
+  background-color: orange;
 }
 
-.OVERBAKED{
-    background-color: red;
+.READY {
+  background-color: green;
 }
 
-.selected{
-    border: 5px solid cornflowerblue !important;
+.OVERBAKED {
+  background-color: red;
 }
 
-.exportSection{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.selected {
+  border: 5px solid cornflowerblue !important;
 }
-#exportButton{
-    color: black;
-    cursor: pointer;
-    padding: 20px;
-    border-radius: 20px;
+
+.exportSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#exportButton {
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 /* #endregion */
 
-
-
-
-
-
 /*#region oven Section */
 .ovenSection {
-    flex-grow: 2;
+  flex-grow: 2;
 }
 
-
 .ovenSctructure {
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-    font-size: 30px;
-    font-family: monospace;
-    margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-size: 30px;
+  font-family: monospace;
+  margin: 5px;
 
-    border: 1px dashed gray;
+  border: 1px dashed gray;
 
-    height: 50px;
-    border-radius: 5px;
+  height: 50px;
+  border-radius: 5px;
 }
 
 .hSlot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    border: 1px solid white;
-    height: 50px;
-    margin: 5px;
-    cursor: pointer;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px solid white;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
 }
 
-.timer {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-}
 
 .verticalSection {
-    border-radius: 5px;
-    display: flex;
-    flex-grow: 20;
+  border-radius: 5px;
+  display: flex;
+  flex-grow: 20;
 }
 
 .vSlot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    border: 1px solid white;
-    margin: 5px;
-    cursor: pointer;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px solid white;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
 }
 
 /*#endregion */
 
-
-
-
-
-
 .hSlot {
-    border: 5px solid white;
-    display: flex;
-    padding: 5px;
-    position: relative;
-    margin-bottom: 10px;
-    height: 50px;
-  }
+  border: 5px solid white;
+  display: flex;
+  padding: 5px;
+  position: relative;
+}
 
-  .subSlot {
-    position: relative;
-    cursor: pointer;
-    flex-grow: 0;
-    width: 0px;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
-    transition-timing-function: ease-in-out;
-    border-radius: 5px;
-    border: 5px solid white;
-  }
-  .subSlot > .timeRemaining {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-  }
-  .subSlot > .slotState {
-    position: absolute;
-    bottom: 2px;
-    left: 2px;
-  }
+.subSlot {
+  position: relative;
+  cursor: pointer;
+  flex-grow: 0;
+  width: 0px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 5s; */
+  transition-timing-function: ease-in-out;
+  border-radius: 5px;
+  border: 5px solid white;
+}
 
-  .subSlot ~ .subSlot {
-    margin-left: 5px;
-  }
-  .subSlot:first-child{
-    flex-grow: 1;
-    width: 100%;
-  }
+.timeRemaining {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.slotState {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+}
 
-  .subSlot.selected{
-    
-    width: 100%;
-    flex-grow: 1;
-  }
+.subSlot:not(:last-child) {
+  margin-right: 5px;
+}
+
+.subSlot:not(.IDLE),
+.subSlot.selected {
+  flex-grow: 1;
+  width: 100%;
+}
